@@ -1,9 +1,24 @@
 {
+    "env": {
+        "browser": true,
+        "commonjs": true,
+        "es2021": true
+    },
+    "extends": "google",
+    "parserOptions": {
+        "ecmaVersion": "latest"
+    },
     "rules": {
         "object-curly-spacing": 0,
         "new-cap": 0,
         "space-before-function-paren": 0,
-        "linebreak-style": ["error", "windows"],
-        "indent": ["error", 4]
+        "linebreak-style": [
+            "error",
+            "windows"
+        ],
+        "indent": [
+            "error",
+            4
+        ]
     }
 }

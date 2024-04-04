@@ -3,6 +3,8 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
+    "lint": "eslint **/*.js --ignore-pattern node_modules/",
+
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
@@ -15,9 +17,14 @@
     "express": "^4.19.2",
     "http-errors": "^2.0.0",
     "jade": "^1.11.0",
+    "lint": "^0.8.19",
     "morgan": "^1.10.0",
     "mysql2": "^3.9.3",
     "prompt-sync": "^4.2.0"
   },
-  "description": ""
+  "description": "",
+  "devDependencies": {
+    "eslint": "^8.57.0",
+    "eslint-config-google": "^0.14.0"
+  }
 }
