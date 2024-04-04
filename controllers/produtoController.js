@@ -1,11 +1,11 @@
 const ProdutoService = require('../services/produtoService');
-/** Class representing a point. */
+/** Classe controller do produto . */
 class ProdutoController {
     /**
-     * Convert a string containing two comma-separated numbers into a point.
-     * @param {object} req - The string containing.
-     * @param {object} res - The string containing.
-     * @return {json} A Point object.
+     * Função para tratamento de erros.
+     * @param {object} req - .
+     * @param {object} res - .
+     * @return {json} .
      */
     static async getAllProdutos(req, res) {
         try {
@@ -17,10 +17,10 @@ class ProdutoController {
         }
     }
     /**
-     * Convert a string containing two comma-separated numbers into a point.
-     * @param {object} req - The string containing.
-     * @param {object} res - The string containing.
-     * @return {json} A Point object.
+     * Função para tratamento de erros caso não tenha o produto.
+     * @param {object} req - .
+     * @param {object} res - .
+     * @return {json} .
      */
     static async getProdutoById(req, res) {
         const { id } = req.params;
@@ -37,10 +37,10 @@ class ProdutoController {
         }
     }
     /**
-     * Convert a string containing two comma-separated numbers into a point.
-     * @param {object} req - The string containing.
-     * @param {object} res - The string containing.
-     * @return {json} A Point object.
+     * Função para tratamento de erro ao salvar  o produto.
+     * @param {object} req - .
+     * @param {object} res - .
+     * @return {json} .
      */
     static async createProduto(req, res) {
         const produto = req.body;
@@ -53,10 +53,10 @@ class ProdutoController {
         }
     }
     /**
-     * Convert a string containing two comma-separated numbers into a point.
-     * @param {object} req - The string containing.
-     * @param {object} res - The string containing.
-     * @return {json} A Point object.
+     * Função para tratamento de erros de atualização do produto.
+     * @param {object} req - .
+     * @param {object} res - .
+     * @return {json} .
      */
     static async updateProduto(req, res) {
         const { id } = req.params;
@@ -74,10 +74,10 @@ class ProdutoController {
         }
     }
     /**
-     * Convert a string containing two comma-separated numbers into a point.
-     * @param {object} req - The string containing.
-     * @param {object} res - The string containing.
-     * @return {json} A Point object.
+     * Função para tratamento de erros ao deletar algum produto.
+     * @param {object} req - .
+     * @param {object} res - .
+     * @return {json} .
      */
     static async deleteProduto(req, res) {
         const { id } = req.params;

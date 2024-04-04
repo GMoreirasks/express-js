@@ -1,9 +1,9 @@
 const db = require('../configs/dbConfig');
-/** Class representing a point. */
+/** Classe da service dos clientes. */
 class ClienteService {
     /**
-     * Get the y value.
-     * @return {Array} The y value.
+     * Função para retornar todos os clientes do banco de dados.
+     * @return {Array} .
      */
     static async getAllClientes() {
         const [rows] = await db.execute('SELECT * FROM clientes');
@@ -11,9 +11,9 @@ class ClienteService {
     }
 
     /**
-     * Convert a string containing two comma-separated numbers into a point.
-     * @param {number} id - The string containing two comma-separated numbers.
-     * @return {object} A Point object.
+     * Função para retornar os clientes pelo ID.
+     * @param {number} id - .
+     * @return {object} .
      */
     static async getClienteById(id) {
         const [rows] =
@@ -22,9 +22,9 @@ class ClienteService {
     }
 
     /**
-     * Convert a string containing two comma-separated numbers into a point.
-     * @param {object} cliente - The string containing two.
-     * @return {number} A Point object.
+     * Função para criar novo cliente.
+     * @param {object} cliente - .
+     * @return {number} .
      */
     static async createCliente(cliente) {
         const { nome, sobrenome, email, idade } = cliente;
@@ -37,10 +37,10 @@ class ClienteService {
     }
 
     /**
-     * Convert a string containing two comma-separated numbers into a point.
-     * @param {number} id - The string containing two comma-separated numbers.
-     * @param {object} cliente - The string containing .
-     * @return {boolean} A Point object.
+     * Função para atualizar cliente no banco de dados.
+     * @param {number} id - .
+     * @param {object} cliente -  .
+     * @return {boolean} .
      */
     static async updateCliente(id, cliente) {
         const { nome, sobrenome, email, idade } = cliente;
@@ -53,9 +53,9 @@ class ClienteService {
     }
 
     /**
-     * Convert a string containing two comma-separated numbers into a point.
-     * @param {number} id - The string containing two comma-separated numbers.
-     * @return {boolean} A Point object.
+     * Função para deletar cliente do bando de dados.
+     * @param {number} id - .
+     * @return {boolean} .
      */
     static async deleteCliente(id) {
         const [result] =

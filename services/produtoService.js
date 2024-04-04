@@ -1,18 +1,18 @@
 const db = require('../configs/dbConfig');
-/** Class representing a point. */
+/** Classe da service dos produtos. */
 class ProdutoService {
     /**
-     * Get the x value.
-     * @return {array} The x value.
+     * Retorna todos os produtos do banco de dados.
+     * @return {array} .
      */
     static async getAllProdutos() {
         const [rows] = await db.execute('SELECT * FROM produtos');
         return rows;
     }
     /**
-   * Convert a string containing two comma-separated numbers into a point.
-   * @param {number} id - The string containing two comma-separated numbers.
-   * @return {object} A Point object.
+   * Retorna o produto com base na sua ID.
+   * @param {number} id - .
+   * @return {object} .
    */
     static async getProdutoById(id) {
         const [rows] =
@@ -20,9 +20,9 @@ class ProdutoService {
         return rows[0];
     }
     /**
-    * Convert a string containing two comma-separated numbers into a point.
-    * @param {object} produto - The string containing ated numbers.
-    * @return {number} A Point object.
+    * Cadastra um produto novo no banco de dados.
+    * @param {object} produto - .
+    * @return {number} .
     */
     static async createProduto(produto) {
         const { nome, descricao, preco } = produto;
@@ -33,10 +33,10 @@ class ProdutoService {
         return result.insertId;
     }
     /**
-    * Convert a string containing two comma-separated numbers into a point.
-    * @param {number} id - The string containing two comma-separated numbers.
-    * @param {object} produto - The string conta-separated numbers.
-    * @return {boolean} A Point object.
+    * Atualiza um produto já existente.
+    * @param {number} id - .
+    * @param {object} produto - .
+    * @return {boolean} .
     */
     static async updateProduto(id, produto) {
         const { nome, descricao, preco } = produto;
@@ -48,7 +48,7 @@ class ProdutoService {
         return result.affectedRows > 0;
     }
     /**
-   * Convert a string containing two comma-separated numbers into a point.
+   * Deleta um produto do banco de dados.
    * @param {number} id - The string containing two comma-separated numbers.
    * @return {boolean} A Point object.
    */

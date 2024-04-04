@@ -1,9 +1,9 @@
 const ClienteController = require('../controllers/clienteController');
-/** Class representing a point. */
+/** Classe das rotas dos clientes. */
 class ClienteRoutes {
     /**
-   * Create a point.
-   * @param {object} app - The x value.
+   * Função de configuração das rotas.
+   * @param {object} app - aplicação.
    */
     static configureAllRoutes(app) {
         app.get('/cliente/', function (req, res) {

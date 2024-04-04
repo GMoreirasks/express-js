@@ -1,9 +1,9 @@
 const ProdutoController = require('../controllers/produtoController');
-/** Class representing a point. */
+/** Classe das rotas dos produtos. */
 class ProdutoRoutes {
     /**
-     * Create a point.
-     * @param {object} app - The y value.
+     * Função de configuração das rotas.
+     * @param {object} app - aplicação.
      */
     static configureAllRoutes(app) {
         app.get('/produto/', function (req, res) {

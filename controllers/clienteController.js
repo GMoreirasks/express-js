@@ -1,11 +1,11 @@
 const ClienteService = require('../services/ClienteService');
-/** Class representing a point. */
+/** Classe controller do cliente . */
 class ClienteController {
     /**
-     * Convert a string containing two comma-separated numbers into a point.
-     * @param {object} req - The string containing.
-     * @param {object} res - The string containing.
-     * @return {json} A Point object.
+     * Função para tratamento de erros ao buscar cliente no banco de dados.
+     * @param {object} req - .
+     * @param {object} res - .
+     * @return {json} .
      */
     static async getAllClientes(req, res) {
         try {
@@ -17,9 +17,9 @@ class ClienteController {
         }
     }
     /**
-     * Convert a string containing two comma-separated numbers into a point.
-     * @param {object} req - The string containing.
-     * @param {object} res - The string containing.
+     * Função para tratamentos de erros na busca do cliente pelo ID.
+     * @param {object} req - .
+     * @param {object} res - .
      * @return {json} A Point object.
      */
     static async getClienteById(req, res) {
@@ -37,10 +37,10 @@ class ClienteController {
         }
     }
     /**
-     * Convert a string containing two comma-separated numbers into a point.
-     * @param {object} req - The string containing.
-     * @param {object} res - The string containing.
-     * @return {json} A Point object.
+     * Função para tratamento de erros na criação de cliente.
+     * @param {object} req - .
+     * @param {object} res - .
+     * @return {json} .
      */
     static async createCliente(req, res) {
         const cliente = req.body;
@@ -53,10 +53,10 @@ class ClienteController {
         }
     }
     /**
-     * Convert a string containing two comma-separated numbers into a point.
-     * @param {object} req - The string containing.
-     * @param {object} res - The string containing.
-     * @return {json} A Point object.
+     * Função para tratamento de erros na atualização de cliente.
+     * @param {object} req - .
+     * @param {object} res - .
+     * @return {json} .
      */
     static async updateCliente(req, res) {
         const { id } = req.params;
@@ -74,10 +74,10 @@ class ClienteController {
         }
     }
     /**
-     * Convert a string containing two comma-separated numbers into a point.
-     * @param {object} req - The string containing.
-     * @param {object} res - The string containing.
-     * @return {json} A Point object.
+     * Função para tratamento de erros ao deletar cliente do banco de dados.
+     * @param {object} req - .
+     * @param {object} res - .
+     * @return {json} .
      */
     static async deleteCliente(req, res) {
         const { id } = req.params;
