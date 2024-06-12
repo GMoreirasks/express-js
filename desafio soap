@@ -1,0 +1,82 @@
+<definitions name="Calculadora"
+             targetNamespace="http://www.example.org/calculadora"
+             xmlns:tns="http://www.example.org/calculadora"
+             xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
+             xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+             xmlns="http://schemas.xmlsoap.org/wsdl/">
+
+  <message name="OperacaoRequest">
+    <part name="num1" type="xsd:float"/>
+    <part name="num2" type="xsd:float"/>
+  </message>
+
+  <message name="OperacaoResponse">
+    <part name="resultado" type="xsd:float"/>
+  </message>
+
+  <portType name="CalculadoraPortType">
+    <operation name="Soma">
+      <input message="tns:OperacaoRequest"/>
+      <output message="tns:OperacaoResponse"/>
+    </operation>
+    <operation name="Subtracao">
+      <input message="tns:OperacaoRequest"/>
+      <output message="tns:OperacaoResponse"/>
+    </operation>
+    <operation name="Multiplicacao">
+      <input message="tns:OperacaoRequest"/>
+      <output message="tns:OperacaoResponse"/>
+    </operation>
+    <operation name="Divisao">
+      <input message="tns:OperacaoRequest"/>
+      <output message="tns:OperacaoResponse"/>
+    </operation>
+  </portType>
+
+  <binding name="CalculadoraBinding" type="tns:CalculadoraPortType">
+    <soap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <operation name="Soma">
+      <soap:operation soapAction="urn:Soma"/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+    </operation>
+    <operation name="Subtracao">
+      <soap:operation soapAction="urn:Subtracao"/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+    </operation>
+    <operation name="Multiplicacao">
+      <soap:operation soapAction="urn:Multiplicacao"/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+    </operation>
+    <operation name="Divisao">
+      <soap:operation soapAction="urn:Divisao"/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+    </operation>
+  </binding>
+
+  <service name="CalculadoraService">
+    <port name="CalculadoraPort" binding="tns:CalculadoraBinding">
+      <soap:address location="http://localhost:3001/wsdlCalculadora"/>
+    </port>
+  </service>
+
+</definitions>
